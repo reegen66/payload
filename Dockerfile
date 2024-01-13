@@ -1,5 +1,5 @@
 FROM node:18.8-alpine as base
-
+RUN npm install -g pnpm
 FROM base as builder
 
 WORKDIR /home/node/app
