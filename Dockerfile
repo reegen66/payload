@@ -16,7 +16,7 @@ ENV NODE_ENV=production
 WORKDIR /home/node
 COPY package*.json  ./
 
-RUN yarn install --production
+RUN yarn install --production --verbose
 COPY --from=builder /home/node/dist ./dist
 COPY --from=builder /home/node/build ./build
 
